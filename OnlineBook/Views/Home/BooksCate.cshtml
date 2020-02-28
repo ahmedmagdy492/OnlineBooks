@@ -1,0 +1,22 @@
+﻿@model List<Book>
+
+
+<div class="main-content">
+    <div class="books-section">
+        @{
+            foreach (Book book in Model)
+            {
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary"><a href="/Home/BooksCate/@book.cate_id">@book.Category.cate_name</a></h6>
+                    </div>
+                    <div class="card-body">
+                        <h3>@book.book_name</h3>
+                        <span>Pages: @book.pages</span>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>
+
